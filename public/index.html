@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESG Impact Tool</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; }
+        .question { margin-bottom: 20px; }
+        #results, #dashboard { display: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ESG Impact Tool</h1>
+        
+        <div id="questionnaire">
+            <h2>ESG Assessment Questionnaire</h2>
+            <div id="questions"></div>
+            <button id="submitBtn">Submit Answers</button>
+        </div>
+
+        <div id="results">
+            <h2>Your ESG Impact Results</h2>
+            <p>Your ESG Score: <span id="esgScore"></span></p>
+            <h3>Recommendations:</h3>
+            <ul id="recommendations"></ul>
+            <button id="saveBtn">Save My Results</button>
+        </div>
+
+        <div id="dashboard">
+            <h2>ESG Dashboard</h2>
+            <canvas id="scoreChart"></canvas>
+            <h3>Set a Goal:</h3>
+            <input type="number" id="goalInput" min="0" max="100" step="1">
+            <button id="setGoalBtn">Set Goal</button>
+            <p id="goalStatus"></p>
+        </div>
+
+        <div id="retrieve">
+            <h3>Retrieve Previous Results:</h3>
+            <input type="text" id="retrieveInput" maxlength="8" placeholder="Enter 8-digit code">
+            <button id="retrieveBtn">Retrieve</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
